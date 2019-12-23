@@ -31,3 +31,15 @@ $ docker container exec -it dockerimage bash
 $ docker system df #Image , conatiner , local , volume
 $ docker system df -v
 -----------------------------------------------------------------------
+#get IP Address
+$ docker container inspect ID12121
+$ docker container inspect ID12121 -f '{{json.networksettings.networks}}'
+--------------------------------------------------------------------------
+#stats
+$ docker container stats ID
+
+
+
+
+
+
