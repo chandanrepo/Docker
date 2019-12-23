@@ -37,7 +37,12 @@ $ docker container inspect ID12121 -f '{{json.networksettings.networks}}'
 --------------------------------------------------------------------------
 #stats
 $ docker container stats ID
-
+-------------------------------------------------------------------------
+#container restart automaticaly on the event of docker restart | restart policy
+$ docker container run -d --restart unless-stopped ngnix
+--------------------------------------------------------------------------
+For checking the ports
+$ netstat -ntlp
 
 
 
