@@ -1,0 +1,33 @@
+------------------------------------
+Docker installation
+------------------------------------
+Linux Command
+$ yum -config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo
+$ yum -y install docker-ce
+$ systemctl start docker
+
+**************************************
+-------------------------------------
+Docker Image creation
+-----------------------------------------
+$ docker pull nginx
+$ docker run -dt -p 8080:80 nginx      #it will create container with random name , use below command to name the conatiner
+$ docker run --name myngnixapp01 -dt -p 8080:80 ngnix
+$ docker ps
+----------------------------------------
+Stoping conatiner
+----------------------------------------
+$ docker conatiner stop ngnix
+#stop all at once by running below command
+$ docker container stop $(docker conatainer ls - aq)
+----------------------------------------
+#start all at oncce
+$ docker container start $(docker conatainer ls - aq)
+-------------------------------------------------------------------------
+#docker container exec command runs a new command in a running container
+$ docker container exec -it dockerimage bash
+------------------------------------------------------------------------
+#disk usage matrix of docker
+$ docker system df #Image , conatiner , local , volume
+$ docker system df -v
+-----------------------------------------------------------------------
