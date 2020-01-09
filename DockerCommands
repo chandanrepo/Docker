@@ -44,6 +44,13 @@ $ docker container run -d --restart unless-stopped ngnix
 For checking the ports
 $ netstat -ntlp
 
+-------------------------------------------------------------------------------
+#Docker Volume management command 
+$ docker volume create
+$docket volume inspect
+$$docker volumen ls
+$docker volume rm
+$docker volume prune
 
 
 
