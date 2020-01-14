@@ -51,7 +51,9 @@ $docket volume inspect
 $$docker volumen ls
 $docker volume rm
 $docker volume prune
-
+-------------------------------------------------------------------------------
+#Docker network
+$ docker network create 
 
 
 
