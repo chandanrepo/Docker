@@ -55,5 +55,17 @@ $docker volume prune
 #Docker network
 $ docker network create 
 
+----------------------------------------------------------------------------
+#custom image creation , keep the war file and dockerfile at the same location
+$ docker image build -t ckumar/seatmgmt ./
+$ docker run -p 8085:8080  b3fbb756a7b4
+
+#Docker file scripts
+# we are extending everything from tomcat:8.0 image ...
+FROM tomcat:8.0
+MAINTAINER ckumar
+# COPY path-to-your-application-war path-to-webapps-in-docker-tomcat
+COPY ./com.sss.seatmgmt-0.0.1-SNAPSHOT.war /usr/local/tomcat/webapps/
+
 
 
